@@ -1,0 +1,11 @@
+faiss_store/
+backend/venv/
+venv/
+backend/.env
+.env
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+dist/
+*.pkl

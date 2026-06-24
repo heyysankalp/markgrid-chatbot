@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { @apply h-full; }
+  body { @apply h-full bg-slate-950 text-slate-100 font-sans antialiased; }
+  #root { @apply h-full; }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar       { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { @apply bg-slate-700 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-slate-500; }
+}
+
+@layer components {
+  /* Markdown inside bot messages */
+  .prose-chat p  { @apply mb-2 last:mb-0 leading-relaxed; }
+  .prose-chat ul { @apply list-disc ml-4 mb-2 space-y-1; }
+  .prose-chat ol { @apply list-decimal ml-4 mb-2 space-y-1; }
+  .prose-chat strong { @apply font-semibold text-white; }
+.prose-chat a  { @apply text-brand-400 underline underline-offset-2 hover:text-brand-500; }
+  .prose-chat code { @apply bg-slate-800 px-1 py-0.5 rounded text-sm font-mono; }
+}
